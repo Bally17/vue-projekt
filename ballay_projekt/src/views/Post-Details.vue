@@ -1,0 +1,15 @@
+<template>
+    <div class="post-details">
+      <h1>This is an about post-details</h1>
+    </div>
+  </template>
+  
+  <style>
+  @media (min-width: 1024px) {
+    .post-details {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  }
+  </style>
