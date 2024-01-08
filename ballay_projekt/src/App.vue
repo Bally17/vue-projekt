@@ -12,7 +12,7 @@ const $route = useRoute();
           <RouterLink to="/" class="nav-link"><h2>Stand Blog<em>.</em></h2></RouterLink>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
@@ -137,7 +137,7 @@ header .navbar {
 	background-color: #f48840;	
 	height: 46px;
 	outline: none;
-	border-radius: 0px;
+	border-radius: 10px;
 	position: absolute;
 	right: 30px;
 	top: 25px;
