@@ -15,27 +15,28 @@ import 'bootstrap'
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <RouterLink to="/" class="nav-link">Home
                 <span class="sr-only">(current)</span>
-              </a>
+              </RouterLink>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <RouterLink to="/about" class="nav-link">About us</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog Entries</a>
+              <RouterLink to="/blog-entries" class="nav-link">Blog Entries</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Post Details</a>
+              <RouterLink to="/post-details" class="nav-link">Post Details</RouterLink>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <RouterLink to="/contact-us" class="nav-link">Contact Us</RouterLink>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  <RouterView></RouterView>
 </template>
 
 <style scoped>
