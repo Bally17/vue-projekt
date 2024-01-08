@@ -36,10 +36,14 @@ const $route = useRoute();
       </div>
     </nav>
   </header>
-  <RouterView></RouterView>
+  <section><RouterView></RouterView></section>
 </template>
 
 <style scoped>
+section{
+  margin-top: 100px;
+  padding: 40px;
+}
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
   color: #f48840!important;
