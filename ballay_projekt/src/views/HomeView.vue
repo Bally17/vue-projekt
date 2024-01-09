@@ -5,7 +5,7 @@ import secondBanner from '@/components/second-banner.vue';
 
 </script>
 <template>
-  <gallerySlider/>
-  <secondBanner msg="Stand Blog HTML5 Template" msg2="Creative HTML Template For Bloggers!" />
-  <blogHomepage/>
+  <gallerySlider />
+  <secondBanner />
+  <blogHomepage />
 </template>
