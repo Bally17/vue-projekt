@@ -260,7 +260,7 @@
     </section>
 </template>
 
-<style>
+<style scoped>
 .blog-posts {
 	margin-top: 100px;
 }
