@@ -1,3 +1,6 @@
+<script setup>
+
+</script>
 <template>
     <section class="blog-posts grid-system">
       <div class="container">
@@ -12,7 +15,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Aenean pulvinar gravida sem nec</h4></a>
+                      <a href="#"><h4>Aenean pulvinar gravida sem nec</h4></a>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 12, 2020</a></li>
@@ -146,15 +149,15 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="post-details.html">
+                        <li><a href="#">
                           <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
                           <span>May 31, 2020</span>
                         </a></li>
-                        <li><a href="post-details.html">
+                        <li><a href="#">
                           <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
                           <span>May 28, 2020</span>
                         </a></li>
-                        <li><a href="post-details.html">
+                        <li><a href="#">
                           <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
                           <span>May 14, 2020</span>
                         </a></li>
