@@ -2,7 +2,6 @@
 import gallerySlider from '@/components/gallery-slider.vue'
 import blogHomepage from '@/components/blog-homepage.vue';
 import secondBanner from '@/components/second-banner.vue';
-import 'bootstrap'
 
 </script>
 <template>
