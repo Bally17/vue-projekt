@@ -1,7 +1,9 @@
+<script setup>
+import gallerySlider from '@/components/gallery-slider.vue'
+
+</script>
 <template>
-  <div class="home">
-    <h1>This is an home page</h1>
-  </div>
+  <gallerySlider></gallerySlider>
 </template>
 
 <style>
