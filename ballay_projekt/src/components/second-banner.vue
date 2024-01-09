@@ -1,6 +1,3 @@
-<script setup>
-
-</script>
 <template>
     <section class="call-to-action">
       <div class="container">

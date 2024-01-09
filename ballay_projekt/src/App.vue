@@ -2,7 +2,6 @@
 import { useRoute,RouterLink, RouterView } from 'vue-router'
 import 'bootstrap'
 import footervue from './components/footer.vue';
-import mainBanner from './components/main-banner.vue';
 const $route = useRoute();
 </script>
 
@@ -38,9 +37,8 @@ const $route = useRoute();
       </div>
     </nav>
   </header>
-  <section><RouterView></RouterView></section>
-  <footervue/>
-  <mainBanner msg="je to tam" msg2="je to tam222222"/>
+  <RouterView />
+  <footervue />
 </template>
 
 <style scoped>

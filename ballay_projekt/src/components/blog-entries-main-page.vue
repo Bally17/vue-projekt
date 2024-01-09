@@ -1,5 +1,5 @@
 <script setup>
-import { useRoute,RouterLink, RouterView } from 'vue-router'
+import { RouterLink } from 'vue-router'
 </script>
 <template>
     <section class="blog-posts grid-system">
