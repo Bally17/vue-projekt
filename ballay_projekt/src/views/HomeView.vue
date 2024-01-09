@@ -6,8 +6,8 @@ import 'bootstrap'
 </script>
 <template>
   <div class="sections">
-  <gallerySlider></gallerySlider>
-  <section class="call-to-action">
+    <gallerySlider></gallerySlider>
+    <section class="call-to-action">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
