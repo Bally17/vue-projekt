@@ -9,7 +9,3 @@ import secondBanner from '@/components/second-banner.vue';
 <secondBanner />
 <blogEntriesMainPage></blogEntriesMainPage>
 </template>
-
-<style>
-
-</style>

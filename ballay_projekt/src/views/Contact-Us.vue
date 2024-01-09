@@ -7,7 +7,3 @@ import mainBanner from '@/components/main-banner.vue'
     <mainBanner msg="contact us" msg2="let’s stay in touch!"/>
     <contactUsMainPage></contactUsMainPage>
 </template>
-
-<style>
-
-</style>

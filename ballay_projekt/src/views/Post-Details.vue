@@ -8,9 +8,4 @@ import secondBanner from '@/components/second-banner.vue';
 <mainBanner msg="Post Details" msg2="Single blog post" />
 <secondBanner/>
 <postDetaisMainPage></postDetaisMainPage>
-
 </template>
-
-<style>
-
-</style>
