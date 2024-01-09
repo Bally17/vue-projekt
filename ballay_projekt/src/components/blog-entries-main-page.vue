@@ -1,6 +1,74 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import sideBar from './side-bar.vue';
+const blogs = [
+  {
+    image: './images/blog-thumb-01.jpg',
+    category: 'Lifestyle',
+    title: 'Donec tincidunt leo',
+    author: 'Admin',
+    date: 'May 31, 2020',
+    comments: '12',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  },
+  {
+    image: './images/blog-thumb-02.jpg',
+    category: 'Lifestyle',
+    title: 'Suspendisse et metus',
+    author: 'Admin',
+    date: 'May 22, 2020',
+    comments: '26',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  },
+  {
+    image: './images/blog-thumb-03.jpg',
+    category: 'Lifestyle',
+    title: 'Donec tincidunt leo',
+    author: 'Admin',
+    date: 'May 18, 2020',
+    comments: '42',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  },
+  {
+    image: './images/blog-thumb-04.jpg',
+    category: 'Lifestyle',
+    title: 'Mauris ac dolor ornare',
+    author: 'Admin',
+    date: 'May 16, 2020',
+    comments: '28',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  },
+  {
+    image: './images/blog-thumb-05.jpg',
+    category: 'Lifestyle',
+    title: 'Donec tincidunt leo',
+    author: 'Admin',
+    date: 'May 12, 2020',
+    comments: '16',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  },
+  {
+    image: './images/blog-thumb-06.jpg',
+    category: 'Lifestyle',
+    title: 'Mauris ac dolor ornare',
+    author: 'Admin',
+    date: 'May 10, 2020',
+    comments: '3',
+    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+    tag: 'Best Templates',
+    tag2: 'TemplateMo',
+  }
+];
 </script>
 <template>
     <section class="blog-posts grid-system">
@@ -9,27 +77,27 @@ import sideBar from './side-bar.vue';
           <div class="col-lg-8">
             <div class="all-blog-posts">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" v-for="(item, itemIndex) in blogs" :key="itemIndex">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-01.jpg" alt="">
+                      <img :src="item.image" alt="">
                     </div>
                     <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
+                      <span>{{item.category}}</span>
+                      <RouterLink to="/post-details"><h4>{{item.title}}</h4></RouterLink>
                       <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 31, 2020</a></li>
-                        <li><a href="#">12 Comments</a></li>
+                        <li><a href="#">{{item.author}}</a></li>
+                        <li><a href="#">{{ item.date }}</a></li>
+                        <li><a href="#">{{item.comments}} Comments</a></li>
                       </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
+                      <p>{{item.content}}</p>
                       <div class="post-options">
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
                               <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
+                              <li><a href="#">{{item.tag}}</a>,</li>
+                              <li><a href="#">{{item.tag2}}</a></li>
                             </ul>
                           </div>
                         </div>
@@ -37,146 +105,7 @@ import sideBar from './side-bar.vue';
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="blog-post">
-                    <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-02.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Suspendisse et metus</h4></RouterLink>
-                      <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 22, 2020</a></li>
-                        <li><a href="#">26 Comments</a></li>
-                      </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                      <div class="post-options">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <ul class="post-tags">
-                              <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="blog-post">
-                    <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-03.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
-                      <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 18, 2020</a></li>
-                        <li><a href="#">42 Comments</a></li>
-                      </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                      <div class="post-options">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <ul class="post-tags">
-                              <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="blog-post">
-                    <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-04.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Mauris ac dolor ornare</h4></RouterLink>
-                      <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 16, 2020</a></li>
-                        <li><a href="#">28 Comments</a></li>
-                      </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                      <div class="post-options">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <ul class="post-tags">
-                              <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="blog-post">
-                    <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-05.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
-                      <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 12, 2020</a></li>
-                        <li><a href="#">16 Comments</a></li>
-                      </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                      <div class="post-options">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <ul class="post-tags">
-                              <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="blog-post">
-                    <div class="blog-thumb">
-                      <img src="../assets/images/blog-thumb-06.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                      <span>Lifestyle</span>
-                      <RouterLink to="/post-details"><h4>Mauris ac dolor ornare</h4></RouterLink>
-                      <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#">May 10, 2020</a></li>
-                        <li><a href="#">3 Comments</a></li>
-                      </ul>
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-                      <div class="post-options">
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <ul class="post-tags">
-                              <li><i class="bi bi-tags"></i></li>
-                              <li><a href="#">Best Templates</a>,</li>
-                              <li><a href="#">TemplateMo</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
                 <div class="col-lg-12">
                   <ul class="page-numbers">
                     <li class="active"><a href="#">1</a></li>
