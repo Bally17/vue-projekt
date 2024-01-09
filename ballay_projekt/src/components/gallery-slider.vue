@@ -31,7 +31,6 @@
 </template>
 
 <script setup>
-import { useRoute,RouterLink, RouterView } from 'vue-router'
 const galleryItems = [
   {
     image: './images/banner-item-01.jpg',
