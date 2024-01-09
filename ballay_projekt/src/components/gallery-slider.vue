@@ -2,7 +2,7 @@
   <div class="main-banner header-text">
     <div id="gallery-slider" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner" style="margin-top: 100px;">
-        <div v-for="(item, index) in galleryItems" :key="index" :class="{ 'carousel-item': true, active: index > 3 }">
+        <div v-for="(item, index) in galleryItems" :key="index" :class="{ 'carousel-item': true, active: index === 0 }">
           <img :src="item.image" class="d-block w-100" alt="Slide Image">
           <div class="carousel-caption d-none d-md-block">
             <div class="meta-category">
@@ -58,11 +58,10 @@ const galleryItems = [
     date: 'May 16, 2020',
     comments: 36,
   },
-  // Přidat další položky podle potřeby
   {
     image: './images/banner-item-04.jpg',
-    category: 'Technology',
-    title: 'Another Lorem ipsum dolor sit',
+    category: 'Fashion',
+    title: 'Responsive and Mobile Ready Layouts',
     link: 'post-details.html',
     author: 'Admin',
     date: 'May 18, 2020',
@@ -70,20 +69,20 @@ const galleryItems = [
   },
   {
     image: './images/banner-item-05.jpg',
-    category: 'Travel',
-    title: 'Another Lorem ipsum dolor sit',
+    category: 'Nature',
+    title: 'Cras congue sed augue id ullamcorper',
     link: 'post-details.html',
     author: 'Admin',
-    date: 'May 20, 2020',
-    comments: 60,
+    date: 'May 24, 2020',
+    comments: 64,
   },
   {
     image: './images/banner-item-06.jpg',
-    category: 'Food',
-    title: 'Another Lorem ipsum dolor sit',
+    category: 'Lifestyle',
+    title: 'Suspendisse nec aliquet ligula',
     link: 'post-details.html',
     author: 'Admin',
-    date: 'May 22, 2020',
+    date: 'May 26, 2020',
     comments: 72,
   },
 ];
@@ -93,7 +92,7 @@ const galleryItems = [
 /* Přizpůsobit styly podle potřeby */
 #gallery-slider {
   width: 420px;
-  height: 520px;
+  height: 400px;
   margin-top: 20px;
   margin-bottom: 0;
 }

@@ -146,6 +146,13 @@ header .navbar {
 	line-height: 30px;
 	font-family: 'FontAwesome';
 }
+@media (min-width: 768px) {
+    body {
+      /* Adjust styles for screens with a minimum width of 768 pixels */
+      margin: 0 auto; /* Center the content */
+      max-width: 1200px; /* Set a maximum width for the content */
+    }
+}
 @media (max-width: 992px) {
 	.navbar .navbar-brand {
 		position: absolute;
