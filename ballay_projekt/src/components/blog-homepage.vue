@@ -26,7 +26,7 @@ import { useRoute,RouterLink, RouterView } from 'vue-router'
                         <div class="row">
                           <div class="col-6">
                             <ul class="post-tags">
-                              <li><i class="bi bi-bezier2"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Beauty</a>,</li>
                               <li><a href="#">Nature</a></li>
                             </ul>
@@ -61,7 +61,7 @@ import { useRoute,RouterLink, RouterView } from 'vue-router'
                         <div class="row">
                           <div class="col-6">
                             <ul class="post-tags">
-                              <li><i class="bi bi-bezier2"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -96,7 +96,7 @@ import { useRoute,RouterLink, RouterView } from 'vue-router'
                         <div class="row">
                           <div class="col-6">
                             <ul class="post-tags">
-                              <li><i class="bi bi-bezier2"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">HTML CSS</a>,</li>
                               <li><a href="#">Photoshop</a></li>
                             </ul>
