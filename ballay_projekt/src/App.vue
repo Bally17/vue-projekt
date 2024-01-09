@@ -1,6 +1,7 @@
 <script setup>
 import { useRoute,RouterLink, RouterView } from 'vue-router'
 import 'bootstrap'
+import footervue from './components/footer.vue';
 const $route = useRoute();
 </script>
 
@@ -37,6 +38,7 @@ const $route = useRoute();
     </nav>
   </header>
   <section><RouterView></RouterView></section>
+  <footervue/>
 </template>
 
 <style scoped>
