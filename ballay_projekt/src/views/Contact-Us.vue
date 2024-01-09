@@ -1,15 +1,11 @@
+<script setup>
+import contactUsBanner from '@/components/contact-us-banner.vue';
+</script>
+
 <template>
-    <div class="contact-us">
-      <h1>This is an about contact-us</h1>
-    </div>
-  </template>
-  
-  <style>
-  @media (min-width: 1024px) {
-    .contact-us {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
-  </style>
+   <contactUsBanner></contactUsBanner>
+</template>
+
+<style>
+
+</style>
