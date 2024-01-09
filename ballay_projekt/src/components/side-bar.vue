@@ -22,7 +22,7 @@ const contentSidebarCategories = [
     content: 'Awesome Layouts',
   },
   {
-    content: 'Creative Idea',
+    content: 'Creative Ideas',
   },
   {
     content: 'Responsive Templates',
@@ -74,12 +74,14 @@ const contentSidebarTags = [
                     <div class="sidebar-heading">
                       <h2>Recent Posts</h2>
                     </div>
-                    <div class="content" v-for="(con, conIndex) in contentSidebar" :key="conIndex">
+                    <div class="content">
                       <ul>
-                        <li><RouterLink to="/post-details">
-                          <h5>{{con.content}}</h5>
-                          <span>{{con.date}}</span>
-                        </RouterLink></li>
+                        <li v-for="(con, conIndex) in contentSidebar" :key="conIndex">
+                            <RouterLink to="/post-details">
+                                <h5>{{con.content}}</h5>
+                                <span>{{con.date}}</span>
+                            </RouterLink>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -91,7 +93,11 @@ const contentSidebarTags = [
                     </div>
                     <div class="content" >
                       <ul v-for="(cat, catIndex) in contentSidebarCategories" :key="catIndex">
-                        <li><RouterLink to="/blog-entries">- {{cat.content}}</RouterLink></li>
+                        <li>
+                            <RouterLink to="/blog-entries">
+                                - {{cat.content}}
+                            </RouterLink>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -104,7 +110,9 @@ const contentSidebarTags = [
                     <div class="content">
                       <ul>
                         <li v-for="(tag, tagIndex) in contentSidebarTags" :key="tagIndex">
-                            <RouterLink to="/blog-entries">{{tag.content}}</RouterLink>
+                            <RouterLink to="/blog-entries">
+                                {{tag.content}}
+                            </RouterLink>
                         </li>
                       </ul>
                     </div>
