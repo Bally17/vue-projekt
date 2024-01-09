@@ -1,5 +1,5 @@
 <script setup>
-
+import aboutUsPage from '@/components/about-us-page.vue';
 </script>
 
 <template>
@@ -17,6 +17,7 @@
         </div>
       </section>
     </div>
+<aboutUsPage></aboutUsPage>
 </template>
 
 <style>
