@@ -202,21 +202,21 @@ import { RouterLink } from 'vue-router'
                     <div class="content">
                       <ul>
                         <li>
-                            <RouterLink to="/post-details">
+                            <RouterLink to="/post-details" class="nav-link">
                                 <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
                                 <span>May 31, 2020</span>
                             </RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/post-details">
+                            <RouterLink to="/post-details" class="nav-link">
                                 <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
                                 <span>May 28, 2020</span>
                             </RouterLink>
                         </li>
                         <li>
-                            <RouterLink to="/post-details">
+                            <RouterLink to="/post-details" class="nav-link">
                                 <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                          <span>May 14, 2020</span>
+                                <span>May 14, 2020</span>
                             </RouterLink>
                         </li>
                       </ul>

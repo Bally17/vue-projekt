@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Best Template Website for HTML CSS</h4></a>
+                      <RouterLink to="/post-details"><h4>Best Template Website for HTML CSS</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 31, 2020</a></li>
@@ -50,7 +50,7 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="down-content">
                       <span>Healthy</span>
-                      <a href="post-details.html"><h4>Etiam id diam vitae lorem dictum</h4></a>
+                      <RouterLink to="/post-details"><h4>Etiam id diam vitae lorem dictum</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 24, 2020</a></li>
@@ -85,7 +85,7 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="down-content">
                       <span>Fashion</span>
-                      <a href="post-details.html"><h4>Donec tincidunt leo nec magna</h4></a>
+                      <RouterLink to="/post-details"><h4>Donec tincidunt leo nec magna</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 14, 2020</a></li>
@@ -115,7 +115,7 @@ import { RouterLink } from 'vue-router'
                 </div>
                 <div class="col-lg-12">
                   <div class="main-button">
-                    <a href="blog.html">View All Posts</a>
+                    <RouterLink to="/blog-entries" class="nav-link">View All Posts</RouterLink>
                   </div>
                 </div>
               </div>
@@ -138,18 +138,24 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="post-details.html">
-                          <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                          <span>May 31, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                          <span>May 28, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                          <span>May 14, 2020</span>
-                        </a></li>
+                        <li>
+                            <RouterLink to="/post-details" class="nav-link">
+                                <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
+                                <span>May 31, 2020</span>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/post-details" class="nav-link">
+                                <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
+                                <span>May 28, 2020</span>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/post-details" class="nav-link">
+                                <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
+                                <span>May 14, 2020</span>
+                            </RouterLink>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -161,12 +167,12 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">- Nature Lifestyle</a></li>
-                        <li><a href="#">- Awesome Layouts</a></li>
-                        <li><a href="#">- Creative Ideas</a></li>
-                        <li><a href="#">- Responsive Templates</a></li>
-                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                        <li><a href="#">- Creative &amp; Unique</a></li>
+                        <li><RouterLink to="/blog-entries">- Nature Lifestyle</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Awesome Layouts</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Creative Ideas</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Responsive Templates</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- HTML5 / CSS3 Templates</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Creative &amp; Unique</RouterLink></li>
                       </ul>
                     </div>
                   </div>
@@ -178,13 +184,13 @@ import { RouterLink } from 'vue-router'
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Creative</a></li>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">Inspiration</a></li>
-                        <li><a href="#">Motivation</a></li>
-                        <li><a href="#">PSD</a></li>
-                        <li><a href="#">Responsive</a></li>
+                        <li><RouterLink to="/blog-entries">Lifestyle</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Creative</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">HTML5</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Inspiration</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Motivation</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">PSD</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Responsive</RouterLink></li>
                       </ul>
                     </div>
                   </div>

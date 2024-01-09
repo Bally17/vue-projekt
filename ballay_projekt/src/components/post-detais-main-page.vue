@@ -1,3 +1,6 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
 <template>
     <section class="blog-posts grid-system">
       <div class="container">
@@ -169,12 +172,12 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">- Nature Lifestyle</a></li>
-                        <li><a href="#">- Awesome Layouts</a></li>
-                        <li><a href="#">- Creative Ideas</a></li>
-                        <li><a href="#">- Responsive Templates</a></li>
-                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                        <li><a href="#">- Creative &amp; Unique</a></li>
+                        <li><RouterLink to="/blog-entries">- Nature Lifestyle</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Awesome Layouts</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Creative Ideas</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Responsive Templates</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- HTML5 / CSS3 Templates</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">- Creative &amp; Unique</RouterLink></li>
                       </ul>
                     </div>
                   </div>
@@ -186,13 +189,13 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Creative</a></li>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">Inspiration</a></li>
-                        <li><a href="#">Motivation</a></li>
-                        <li><a href="#">PSD</a></li>
-                        <li><a href="#">Responsive</a></li>
+                        <li><RouterLink to="/blog-entries">Lifestyle</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Creative</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">HTML5</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Inspiration</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Motivation</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">PSD</RouterLink></li>
+                        <li><RouterLink to="/blog-entries">Responsive</RouterLink></li>
                       </ul>
                     </div>
                   </div>
