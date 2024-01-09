@@ -1,15 +1,15 @@
+<script setup>
+import postDetaisBanner from '@/components/post-detais-banner.vue';
+import postDetaisBannerSecond from '@/components/post-detais-banner-second.vue';
+// import postDetaisMainPage from '@/components/post-detais-main-page.vue';
+
+</script>
 <template>
-    <div class="post-details">
-      <h1>This is an about post-details</h1>
-    </div>
-  </template>
-  
-  <style>
-  @media (min-width: 1024px) {
-    .post-details {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
-  }
-  </style>
+<postDetaisBanner></postDetaisBanner>
+<postDetaisBannerSecond></postDetaisBannerSecond>
+
+</template>
+
+<style>
+
+</style>
