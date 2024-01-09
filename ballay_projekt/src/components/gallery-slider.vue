@@ -9,6 +9,7 @@
               <span>{{ item.category }}</span>
             </div>
             <a :href="item.link" style="text-decoration: none;"><h4>{{ item.title }}</h4></a>
+            
             <ul class="post-info">
               <li><a href="#">{{ item.author }}</a></li>
               <li><a href="#">{{ item.date }}</a></li>
@@ -30,12 +31,13 @@
 </template>
 
 <script setup>
+import { useRoute,RouterLink, RouterView } from 'vue-router'
 const galleryItems = [
   {
     image: './images/banner-item-01.jpg',
     category: 'Fashion',
     title: 'Morbi dapibus condimentum',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 12, 2020',
     comments: 12,
@@ -44,7 +46,7 @@ const galleryItems = [
     image: './images/banner-item-02.jpg',
     category: 'Nature',
     title: 'Donec porttitor augue at velit',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 14, 2020',
     comments: 24,
@@ -53,7 +55,7 @@ const galleryItems = [
     image: './images/banner-item-03.jpg',
     category: 'Lifestyle',
     title: 'Best HTML Templates on TemplateMo',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 16, 2020',
     comments: 36,
@@ -62,7 +64,7 @@ const galleryItems = [
     image: './images/banner-item-04.jpg',
     category: 'Fashion',
     title: 'Responsive and Mobile Ready Layouts',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 18, 2020',
     comments: 48,
@@ -71,7 +73,7 @@ const galleryItems = [
     image: './images/banner-item-05.jpg',
     category: 'Nature',
     title: 'Cras congue sed augue id ullamcorper',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 24, 2020',
     comments: 64,
@@ -80,7 +82,7 @@ const galleryItems = [
     image: './images/banner-item-06.jpg',
     category: 'Lifestyle',
     title: 'Suspendisse nec aliquet ligula',
-    link: 'post-details.html',
+    link: '/post-details',
     author: 'Admin',
     date: 'May 26, 2020',
     comments: 72,
