@@ -1,11 +1,11 @@
 <script setup>
-import contactUsBanner from '@/components/contact-us-banner.vue';
 import contactUsMainPage from '@/components/contact-us-main-page.vue'
+import mainBanner from '@/components/main-banner.vue'
 </script>
 
 <template>
-   <contactUsBanner></contactUsBanner>
-   <contactUsMainPage></contactUsMainPage>
+    <mainBanner msg="contact us" msg2="let’s stay in touch!"/>
+    <contactUsMainPage></contactUsMainPage>
 </template>
 
 <style>

@@ -1,23 +1,11 @@
 <script setup>
 import aboutUsPage from '@/components/about-us-page.vue';
+import mainBanner from '@/components/main-banner.vue'
 </script>
 
 <template>
-  <div class="heading-page header-text">
-      <section class="page-heading">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-content">
-                <h4>about us</h4>
-                <h2>more about us!</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-<aboutUsPage></aboutUsPage>
+<mainBanner msg="about us" msg2="more about us!"/>
+<aboutUsPage/>
 </template>
 
 <style>
