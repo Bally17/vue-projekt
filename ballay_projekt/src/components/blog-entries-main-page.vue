@@ -1,5 +1,5 @@
 <script setup>
-
+import { useRoute,RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
     <section class="blog-posts grid-system">
@@ -15,7 +15,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Donec tincidunt leo</h4></a>
+                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 31, 2020</a></li>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Suspendisse et metus</h4></a>
+                      <RouterLink to="/post-details"><h4>Suspendisse et metus</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 22, 2020</a></li>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Donec tincidunt leo</h4></a>
+                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 18, 2020</a></li>
@@ -99,7 +99,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Mauris ac dolor ornare</h4></a>
+                      <RouterLink to="/post-details"><h4>Mauris ac dolor ornare</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 16, 2020</a></li>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Donec tincidunt leo</h4></a>
+                      <RouterLink to="/post-details"><h4>Donec tincidunt leo</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 12, 2020</a></li>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
-                      <a href="post-details.html"><h4>Mauris ac dolor ornare</h4></a>
+                      <RouterLink to="/post-details"><h4>Mauris ac dolor ornare</h4></RouterLink>
                       <ul class="post-info">
                         <li><a href="#">Admin</a></li>
                         <li><a href="#">May 10, 2020</a></li>
@@ -201,18 +201,24 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="post-details.html">
-                          <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                          <span>May 31, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                          <span>May 28, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
+                        <li>
+                            <RouterLink to="/post-details">
+                                <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
+                                <span>May 31, 2020</span>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/post-details">
+                                <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
+                                <span>May 28, 2020</span>
+                            </RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/post-details">
+                                <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
                           <span>May 14, 2020</span>
-                        </a></li>
+                            </RouterLink>
+                        </li>
                       </ul>
                     </div>
                   </div>
