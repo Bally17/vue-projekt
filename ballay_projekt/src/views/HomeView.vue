@@ -1,5 +1,6 @@
 <script setup>
 import gallerySlider from '@/components/gallery-slider.vue'
+import blogHomepage from '@/components/blog-homepage.vue';
 import 'bootstrap'
 
 </script>
@@ -28,6 +29,7 @@ import 'bootstrap'
       </div>
     </section>
   </div>
+  <blogHomepage></blogHomepage>
 </template>
 
 <style>
@@ -61,7 +63,7 @@ import 'bootstrap'
 	margin-bottom: 0px;
 	margin-top: 12px;
 	color: #fff;
-	font-size: 26px;
+	font-size: 15px;
 	font-weight: 900;
 	letter-spacing: 0.25px;
 }
