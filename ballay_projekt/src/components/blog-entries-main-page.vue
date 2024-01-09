@@ -11,7 +11,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-01.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-01.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -26,7 +26,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -39,7 +39,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-02.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-02.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -54,7 +54,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -67,7 +67,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-03.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-03.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -82,7 +82,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -95,7 +95,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-04.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-04.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -110,7 +110,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -123,7 +123,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-05.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-05.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -138,7 +138,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -151,7 +151,7 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="assets/images/blog-thumb-06.jpg" alt="">
+                      <img src="../assets/images/blog-thumb-06.jpg" alt="">
                     </div>
                     <div class="down-content">
                       <span>Lifestyle</span>
@@ -166,7 +166,7 @@
                         <div class="row">
                           <div class="col-lg-12">
                             <ul class="post-tags">
-                              <li><i class="fa fa-tags"></i></li>
+                              <li><i class="bi bi-tags"></i></li>
                               <li><a href="#">Best Templates</a>,</li>
                               <li><a href="#">TemplateMo</a></li>
                             </ul>
@@ -178,10 +178,7 @@
                 </div>
                 <div class="col-lg-12">
                   <ul class="page-numbers">
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
                   </ul>
                 </div>
               </div>
@@ -408,6 +405,7 @@ ul.page-numbers li a {
 	border: 1px solid #eee;
 	font-weight: 500;
 	transition: all 0.3s;
+    text-decoration: none;
 }
 
 ul.page-numbers li.active a {
@@ -582,6 +580,10 @@ ul.page-numbers li a:hover {
 	margin-bottom: 15px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #eee;
+    list-style-type: none;
+}
+.sidebar .recent-posts ul li a{
+    text-decoration: none;
 }
 
 .sidebar .recent-posts ul li:last-child {
@@ -607,10 +609,12 @@ ul.page-numbers li a:hover {
 	font-size: 14px;
 	color: #aaa;
 	margin-top: 8px;
+    
 }
 
 .sidebar .categories ul li {
 	margin-bottom: 15px;
+    list-style-type: none;
 }
 
 .sidebar .categories ul li:last-child {
@@ -622,6 +626,7 @@ ul.page-numbers li a:hover {
 	font-weight: 700;
 	color: #20232e;
 	transition: all .3s;
+    text-decoration: none;
 }
 
 .sidebar .categories ul li a:hover {
@@ -645,6 +650,7 @@ ul.page-numbers li a:hover {
 	border: 1px solid #eee;
 	padding: 10px 18px;
 	transition: all .3s;
+    text-decoration: none;
 }
 
 .sidebar .tags ul li a:hover {

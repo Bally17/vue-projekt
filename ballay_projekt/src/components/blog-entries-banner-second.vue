@@ -26,13 +26,16 @@
 </template>
 
 <style scoped>
+.call-to-action {
+	margin-top: 100px;
+}
+
 .call-to-action .main-content {
 	padding: 40px;
 	background-image: url(../images/cta-bg.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-  border-radius: 20px;
 }
 
 .call-to-action .main-content span {
@@ -46,7 +49,7 @@
 	margin-bottom: 0px;
 	margin-top: 12px;
 	color: #fff;
-	font-size: 15px;
+	font-size: 26px;
 	font-weight: 900;
 	letter-spacing: 0.25px;
 }
@@ -54,6 +57,5 @@
 .call-to-action .main-content .main-button {
 	text-align: right;
 	margin-top: 12px;
-  
 }
 </style>
