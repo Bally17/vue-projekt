@@ -6,9 +6,9 @@
           <img :src="item.image" class="d-block w-100" alt="Slide Image">
           <div class="carousel-caption d-none d-md-block">
             <div class="meta-category">
-              <span>{{ item.category }}</span>
+              <span>Fashion</span>
             </div>
-            <a :href="item.link" style="text-decoration: none;"><h4>{{ item.title }}</h4></a>
+            <a :href="item.link" style="text-decoration: none;"><h4>{{  }}</h4></a>
             
             <ul class="post-info">
               <li><a href="#">{{ item.author }}</a></li>
@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import { useRoute,RouterLink, RouterView } from 'vue-router'
 const galleryItems = [
   {
     image: './images/banner-item-01.jpg',
@@ -92,14 +93,14 @@ const galleryItems = [
 <style scoped>
 /* Přizpůsobit styly podle potřeby */
 #gallery-slider {
-  width: 420px;
-  height: 400px;
+  
   margin-top: 20px;
   margin-bottom: 0;
 }
 
 .carousel-inner {
   display: flex;
+  width: 33%;
   
 }
 
