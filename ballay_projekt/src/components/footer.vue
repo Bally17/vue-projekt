@@ -4,24 +4,41 @@
         <div class="row">
           <div class="col-lg-12">
             <ul class="social-icons">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Behance</a></li>
-              <li><a href="#">Linkedin</a></li>
-              <li><a href="#">Dribbble</a></li>
+              <li v-for="socialLink in socialLinks" :key="socialLink.name">
+                <a :href="socialLink.url">{{ socialLink.name }}</a>
+              </li>
             </ul>
           </div>
           <div class="col-lg-12">
             <div class="copyright-text">
-              <p>Copyright 2020 Stand Blog Co.
-                    
-                 | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a></p>
+              <p>
+                Copyright {{ copyrightYear }} Stand Blog Co.
+                | Design: <a :href="designUrl" rel="nofollow" target="_parent">TemplateMo</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </footer>
-</template>
+  </template>
+  
+  <script>
+import { defineComponent } from 'vue';
+import { myStore } from '@/stores/store.js'; // Adjust the path based on your project structure
+
+export default defineComponent({
+  setup() {
+    const store = myStore();
+
+    return {
+      socialLinks: store.socialLinks,
+      copyrightYear: store.copyrightYear,
+      designUrl: store.designUrl,
+    };
+  },
+});
+</script>
+  
 <style>
 footer {
 	margin-top: 100px;
