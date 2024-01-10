@@ -33,8 +33,6 @@ export default defineComponent({
 
     return {
       socialLinks: store.socialLinks,
-      copyrightYear: store.copyrightYear,
-      designUrl: store.designUrl,
     };
   },
 });

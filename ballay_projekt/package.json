@@ -22,7 +22,10 @@
     "pinia": "^2.1.7",
     "swiper": "^11.0.5",
     "vue": "^3.4.6",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.4.10",
+    "vuex": "^4.1.0",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",

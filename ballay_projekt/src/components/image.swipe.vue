@@ -7,113 +7,22 @@
       }"
       :modules="modules"
       :loop="true"
-      
       class="mySwiper"
     >
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-01.jpg" alt="">
+    <swiper-slide class="swiper-image" v-for="(images, index) in images" :key="index">
+      <img :src="images.src" :alt="images.alt">
         <div>
           <div class="carousel-caption d-none d-md-block">
             <div class="meta-category">
-              <span>Fashion</span>
+              <span>{{images.title}}</span>
             </div>
             <RouterLink to="/post-details" class="RouterLink">
-                <h4>Morbi dapibus condimentum</h4>
+                <h4>{{images.title}}</h4>
             </RouterLink>
             <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 12, 2020</a></li>
-              <li><a href="#">12 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-    </swiper-slide>
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-02.jpg" alt="">
-        <div>
-          <div class="carousel-caption d-none d-md-block">
-            <div class="meta-category">
-              <span>Nature</span>
-            </div>
-            <RouterLink to="/post-details" class="RouterLink">
-                <h4>Donec porttitor augue at velit</h4>
-            </RouterLink>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 14, 2020</a></li>
-              <li><a href="#">24 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-    </swiper-slide>
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-03.jpg" alt="">
-        <div>
-          <div class="carousel-caption d-none d-md-block">
-            <div class="meta-category">
-              <span>Lifestyle</span>
-            </div>
-            <RouterLink to="/post-details" class="RouterLink">
-                <h4>Best HTML Templates on TemplateMo</h4>
-            </RouterLink>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 16, 2020</a></li>
-              <li><a href="#">36 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-    </swiper-slide>
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-04.jpg" alt="">
-        <div>
-          <div class="carousel-caption d-none d-md-block">
-            <div class="meta-category">
-              <span>Fashion</span>
-            </div>
-            <RouterLink to="/post-details" class="RouterLink">
-                <h4>Responsive and Mobile Ready Layouts</h4>
-            </RouterLink>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 18, 2020</a></li>
-              <li><a href="#">48 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-    </swiper-slide>
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-05.jpg" alt="">
-        <div>
-          <div class="carousel-caption d-none d-md-block">
-            <div class="meta-category">
-              <span>Nature</span>
-            </div>
-            <RouterLink to="/post-details" class="RouterLink">
-                <h4>Cras congue sed augue id ullamcorper</h4>
-            </RouterLink>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 24, 2020</a></li>
-              <li><a href="#">64 Comments</a></li>
-            </ul>
-          </div>
-        </div>
-    </swiper-slide>
-    <swiper-slide class="swiper-image">
-        <img src="../assets/images/banner-item-06.jpg" alt="">
-        <div>
-          <div class="carousel-caption d-none d-md-block">
-            <div class="meta-category">
-              <span>Lifestyle</span>
-            </div>
-            <RouterLink to="/post-details" class="RouterLink">
-                <h4>Suspendisse nec aliquet ligula</h4>
-            </RouterLink>
-            <ul class="post-info">
-              <li><a href="#">Admin</a></li>
-              <li><a href="#">May 26, 2020</a></li>
-              <li><a href="#">72 Comments</a></li>
+              <li><a href="#">{{images.author}}</a></li>
+              <li><a href="#">{{images.date}}</a></li>
+              <li><a href="#">{{images.comment}} Comments</a></li>
             </ul>
           </div>
         </div>
@@ -122,7 +31,8 @@
   </template>
   <script>
   import { RouterLink } from 'vue-router'
-  
+  import { myStore } from '@/stores/store.js'
+  import { defineComponent } from 'vue';
     // Import Swiper Vue.js components
     import { Swiper, SwiperSlide } from 'swiper/vue';
   
@@ -135,17 +45,24 @@
     // import required modules
     import { Pagination } from 'swiper/modules';
   
-    export default {
+    export default defineComponent({
       components: {
         Swiper,
         SwiperSlide,
       },
       setup() {
+        const img = myStore();
         return {
           modules: [Pagination],
+          images: img.images,
         };
       },
+      data() {
+    return {
+      modules: [Pagination],
     };
+  },
+    })
   </script>
   <style scoped>
   .swiper-image img {

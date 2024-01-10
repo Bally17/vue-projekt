@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import sideBar from './side-bar.vue';
+
 </script>
 <template>
     <section class="blog-posts">
