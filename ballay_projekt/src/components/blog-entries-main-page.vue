@@ -154,7 +154,7 @@ export default {
                 
                 <div class="col-lg-12">
                     <ul class="page-numbers">
-                        <li v-for="page in [1, 2, 3, 4, 5]" :key="page" :class="{ active: currentPage === page }">
+                        <li v-for="page in [1, 2, 3]" :key="page" :class="{ active: currentPage === page }">
                             <!-- Ruční aktualizace aktuální stránky -->
                             <a @click="setCurrentPage(page)" class="page-link">{{ page }}</a>
                         </li>
