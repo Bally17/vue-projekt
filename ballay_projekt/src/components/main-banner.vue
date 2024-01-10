@@ -39,7 +39,7 @@ defineProps({
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(../public/images/heading-bg.jpg);
+	background-image: url(./images/heading-bg.jpg);
 }
 
 .page-heading .text-content h4 {

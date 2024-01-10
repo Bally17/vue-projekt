@@ -1,6 +1,5 @@
 <script>
 import { useRoute,RouterLink } from 'vue-router'
-
 import { defineComponent } from 'vue';
 import { myStore } from '@/stores/store.js'; // Adjust the path based on your project structure
 
@@ -22,9 +21,13 @@ export default defineComponent({
         <a class="navbar-brand" href="#">
           <RouterLink to="/" class="nav-link"><h2>Stand Blog<em>.</em></h2></RouterLink>
         </a>
+
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
+
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto" v-for="links in links" :key="links.name">
             <li class="nav-item" :class="{ 'active': $route.path === links.url }">
