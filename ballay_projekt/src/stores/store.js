@@ -1,4 +1,3 @@
-// src/stores/store.js
 import { createPinia } from 'pinia';
 import { defineStore } from 'pinia'  
 const pinia = createPinia();

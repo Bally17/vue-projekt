@@ -1,6 +1,18 @@
-<script setup>
+<script>
 import { useRoute,RouterLink } from 'vue-router'
-const $route = useRoute();
+
+import { defineComponent } from 'vue';
+import { myStore } from '@/stores/store2.js'; // Adjust the path based on your project structure
+
+export default defineComponent({
+  setup() {
+    const store = myStore();
+    const $route = useRoute();
+    return {
+      socialLinks: store.socialLinks,
+    };
+  },
+});
 </script>
 
 <template>
@@ -14,22 +26,10 @@ const $route = useRoute();
           <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item" :class="{ 'active': $route.path === '/' }">
-              <RouterLink to="/" class="nav-link">Home</RouterLink>
+          <ul class="navbar-nav ml-auto" v-for="socialLink in socialLinks" :key="socialLink.name">
+            <li class="nav-item" :class="{ 'active': $route.path === socialLink.url }">
+              <RouterLink :to= "socialLink.url" class="nav-link">{{ socialLink.name }}</RouterLink>
             </li> 
-            <li class="nav-item" :class="{ 'active': $route.path === '/about' }">
-              <RouterLink to="/about" class="nav-link">About us</RouterLink>
-            </li>
-            <li class="nav-item" :class="{ 'active': $route.path === '/blog-entries' }">
-              <RouterLink to="/blog-entries" class="nav-link">Blog Entries</RouterLink>
-            </li>
-            <li class="nav-item" :class="{ 'active': $route.path === '/post-details' }">
-              <RouterLink to="/post-details" class="nav-link">Post Details</RouterLink>
-            </li>
-            <li class="nav-item" :class="{ 'active': $route.path === '/contact-us' }">
-              <RouterLink to="/contact-us" class="nav-link">Contact Us</RouterLink>
-            </li>
           </ul>
         </div>
       </div>
