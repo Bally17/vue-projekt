@@ -11,6 +11,13 @@ export const myStore = defineStore('myStore', {
       { name: 'Linkedin', url: '#' },
       { name: 'Dribbble', url: '#' },
     ],
+    links: [
+        { name: 'Home', url: '/' },
+        { name: 'About us', url: '/about' },
+        { name: 'Blog Entries', url: '/blog-entries' },
+        { name: 'Post Details', url: '/post-details' },
+        { name: 'Contact Us', url: '/contact-us' },
+      ],
   }),
 });
 

@@ -2,14 +2,14 @@
 import { useRoute,RouterLink } from 'vue-router'
 
 import { defineComponent } from 'vue';
-import { myStore } from '@/stores/store2.js'; // Adjust the path based on your project structure
+import { myStore } from '@/stores/store.js'; // Adjust the path based on your project structure
 
 export default defineComponent({
   setup() {
     const store = myStore();
     const $route = useRoute();
     return {
-      socialLinks: store.socialLinks,
+      links: store.links,
     };
   },
 });
@@ -26,9 +26,9 @@ export default defineComponent({
           <i class="bi bi-list"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto" v-for="socialLink in socialLinks" :key="socialLink.name">
-            <li class="nav-item" :class="{ 'active': $route.path === socialLink.url }">
-              <RouterLink :to= "socialLink.url" class="nav-link">{{ socialLink.name }}</RouterLink>
+          <ul class="navbar-nav ml-auto" v-for="links in links" :key="links.name">
+            <li class="nav-item" :class="{ 'active': $route.path === links.url }">
+              <RouterLink :to= "links.url" class="nav-link">{{ links.name }}</RouterLink>
             </li> 
           </ul>
         </div>
