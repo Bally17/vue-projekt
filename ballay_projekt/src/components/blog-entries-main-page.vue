@@ -1,75 +1,121 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-import sideBar from './side-bar.vue';
-const blogs = [
-  {
-    image: './images/blog-thumb-01.jpg',
-    category: 'Lifestyle',
-    title: 'Donec tincidunt leo',
-    author: 'Admin',
-    date: 'May 31, 2020',
-    comments: '12',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  },
-  {
-    image: './images/blog-thumb-02.jpg',
-    category: 'Lifestyle',
-    title: 'Suspendisse et metus',
-    author: 'Admin',
-    date: 'May 22, 2020',
-    comments: '26',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  },
-  {
-    image: './images/blog-thumb-03.jpg',
-    category: 'Lifestyle',
-    title: 'Donec tincidunt leo',
-    author: 'Admin',
-    date: 'May 18, 2020',
-    comments: '42',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  },
-  {
-    image: './images/blog-thumb-04.jpg',
-    category: 'Lifestyle',
-    title: 'Mauris ac dolor ornare',
-    author: 'Admin',
-    date: 'May 16, 2020',
-    comments: '28',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  },
-  {
-    image: './images/blog-thumb-05.jpg',
-    category: 'Lifestyle',
-    title: 'Donec tincidunt leo',
-    author: 'Admin',
-    date: 'May 12, 2020',
-    comments: '16',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  },
-  {
-    image: './images/blog-thumb-06.jpg',
-    category: 'Lifestyle',
-    title: 'Mauris ac dolor ornare',
-    author: 'Admin',
-    date: 'May 10, 2020',
-    comments: '3',
-    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
-    tag: 'Best Templates',
-    tag2: 'TemplateMo',
-  }
-];
+<script>
+import { ref, computed } from 'vue';
+import { RouterLink } from 'vue-router';
+import SideBar from './side-bar.vue';
+
+export default {
+    data() {
+        return {
+            blogs: [
+                {
+                    image: './images/blog-thumb-01.jpg',
+                    category: 'Lifestyle',
+                    title: 'Donec tincidunt leo',
+                    author: 'Admin',
+                    date: 'May 31, 2020',
+                    comments: '12',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-02.jpg',
+                    category: 'Lifestyle',
+                    title: 'Suspendisse et metus',
+                    author: 'Admin',
+                    date: 'May 22, 2020',
+                    comments: '26',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-03.jpg',
+                    category: 'Lifestyle',
+                    title: 'Donec tincidunt leo',
+                    author: 'Admin',
+                    date: 'May 18, 2020',
+                    comments: '42',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-04.jpg',
+                    category: 'Lifestyle',
+                    title: 'Mauris ac dolor ornare',
+                    author: 'Admin',
+                    date: 'May 16, 2020',
+                    comments: '28',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-05.jpg',
+                    category: 'Lifestyle',
+                    title: 'Donec tincidunt leo',
+                    author: 'Admin',
+                    date: 'May 12, 2020',
+                    comments: '16',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-06.jpg',
+                    category: 'Lifestyle',
+                    title: 'Mauris ac dolor ornare',
+                    author: 'Admin',
+                    date: 'May 10, 2020',
+                    comments: '3',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-05.jpg',
+                    category: 'Lifestyle',
+                    title: 'Donec tincidunt leo',
+                    author: 'Admin',
+                    date: 'May 12, 2020',
+                    comments: '16',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                },
+                {
+                    image: './images/blog-thumb-06.jpg',
+                    category: 'Lifestyle',
+                    title: 'Mauris ac dolor ornare',
+                    author: 'Admin',
+                    date: 'May 10, 2020',
+                    comments: '3',
+                    content: 'Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.',
+                    tag: 'Best Templates',
+                    tag2: 'TemplateMo',
+                }
+            ],
+            currentPage: 1,
+        };
+    },
+    computed: {
+        currentPosts() {
+            const startIndex = (this.currentPage - 1) * 6; // 6 je počet položek na stránku
+            const endIndex = startIndex + 6; // 6 je počet položek na stránku
+            return this.blogs.slice(startIndex, endIndex);
+        },
+    },
+    methods: {
+        // Metoda pro ruční aktualizaci aktuální stránky
+        setCurrentPage(page) {
+            this.currentPage = page;
+        },
+    },
+    components: { SideBar }
+};
 </script>
+
 <template>
     <section class="blog-posts grid-system">
       <div class="container">
@@ -77,7 +123,7 @@ const blogs = [
           <div class="col-lg-8">
             <div class="all-blog-posts">
               <div class="row">
-                <div class="col-lg-6" v-for="(item, itemIndex) in blogs" :key="itemIndex">
+                <div class="col-lg-6" v-for="(item, itemIndex) in currentPosts" :key="itemIndex">
                   <div class="blog-post">
                     <div class="blog-thumb">
                       <img :src="item.image" alt="">
@@ -107,14 +153,17 @@ const blogs = [
                 </div>
                 
                 <div class="col-lg-12">
-                  <ul class="page-numbers">
-                    <li class="active"><a href="#">1</a></li>
-                  </ul>
+                    <ul class="page-numbers">
+                        <li v-for="page in [1, 2, 3, 4, 5]" :key="page" :class="{ active: currentPage === page }">
+                            <!-- Ruční aktualizace aktuální stránky -->
+                            <a @click="setCurrentPage(page)" class="page-link">{{ page }}</a>
+                        </li>
+                    </ul>
                 </div>
               </div>
             </div>
           </div>
-          <sideBar />
+          <SideBar/>
         </div>
       </div>
     </section>
@@ -252,6 +301,7 @@ ul.page-numbers {
 ul.page-numbers li {
 	display: inline-block;
 	margin: 0px 5px;
+    
 }
 
 ul.page-numbers li a {
@@ -266,6 +316,7 @@ ul.page-numbers li a {
 	font-weight: 500;
 	transition: all 0.3s;
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul.page-numbers li.active a {

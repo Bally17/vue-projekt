@@ -11,8 +11,6 @@ export const myStore = defineStore('myStore', {
       { name: 'Linkedin', url: '#' },
       { name: 'Dribbble', url: '#' },
     ],
-    copyrightYear: 2020,
-    designUrl: 'https://templatemo.com',
   }),
 });
 
