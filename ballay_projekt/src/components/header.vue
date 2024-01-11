@@ -10,7 +10,7 @@ export default defineComponent({
     return {
       links: store.links,
     };
-  },
+  }
 });
 </script>
 
@@ -21,14 +21,19 @@ export default defineComponent({
         <a class="navbar-brand" href="#">
           <RouterLink to="/" class="nav-link"><h2>Stand Blog<em>.</em></h2></RouterLink>
         </a>
-
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-list"></i>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="dropdown-menu" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto" v-for="links in links" :key="links.name">
+                    <li class="nav-item" :class="{ 'active': $route.path === links.url }">
+                    <RouterLink :to= "links.url" class="nav-link">{{ links.name }}</RouterLink>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto" v-for="links in links" :key="links.name">
             <li class="nav-item" :class="{ 'active': $route.path === links.url }">
               <RouterLink :to= "links.url" class="nav-link">{{ links.name }}</RouterLink>
@@ -173,18 +178,20 @@ header .navbar {
 	#navbarResponsive {
 	    z-index: 99999;
 	    position: absolute;
-	    top: 80px;
+	    top: 70px;
 	    left: 0;
 	    width: 100%;
 	    text-align: center;
 	    background-color: #fff;
 	    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        border: none;
+        border-radius: 0;
 	}
-	.navbar .navbar-nav .nav-item {
-		border-bottom: 1px solid #eee;
+	.navbar-nav .nav-item {
+		border-bottom: 1px solid rgba(147, 147, 147, 0.238);
 	}
-	.navbar .navbar-nav .nav-item:last-child {
-		border-bottom: none;
+	.navbar-nav .nav-item:last-child {
+		border-bottom: 1px solid rgba(147, 147, 147, 0.238);
 	}
 	.navbar .navbar-nav a.nav-link {
 		padding: 15px 0px;
