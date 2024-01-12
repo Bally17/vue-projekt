@@ -14,7 +14,7 @@
         <div>
           <div class="carousel-caption d-none d-md-block">
             <div class="meta-category">
-              <span>{{images.title}}</span>
+              <span>{{images.category}}</span>
             </div>
             <RouterLink to="/post-details" class="RouterLink">
                 <h4>{{images.title}}</h4>
@@ -74,10 +74,7 @@
   }
 
   
-  .slide-text {
-    
-    margin-top: 10px; /* Prispôsobte výšku medzery podľa potreby */
-  }
+  
   .RouterLink{
     text-decoration: none;
   }
@@ -130,6 +127,9 @@
 
 .carousel-caption ul li a:hover {
   color: #f48840;
+}
+@media (min-width: 1052px) {
+    
 }
 </style>
   
